@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICCAD 2026 Workshop</title>
+  <meta name="description" content="ICCAD 2026 Workshop — official website." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====================== HEADER / HERO ====================== -->
+  <header class="hero" id="top">
+    <nav class="nav">
+      <a class="nav__brand" href="#top">ICCAD&nbsp;2026</a>
+      <button class="nav__toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#topics">Topics</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#program">Program</a></li>
+        <li><a href="#committee">Committee</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Workshop &middot; Co-located with ICCAD 2026</p>
+      <h1 class="hero__title">ICCAD 2026 Workshop</h1>
+      <p class="hero__subtitle">Hardware and Algorithms for Learning On-a-chip</p>
+      <p class="hero__meta">
+        <span>&#128197; TBD, 2026</span>
+        <span>&#128205; TBD / Virtual</span>
+      </p>
+      <!-- TODO: replace date, location, and links below with ICCAD 2026 details -->
+      <div class="hero__actions">
+        <a class="btn" href="#program">View Program</a>
+        <a class="btn btn--ghost" href="#about">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================== ABOUT ====================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title">General Information</h2>
+        <!-- PLACEHOLDER text borrowed from HALO 2020 — replace with ICCAD 2026 scope -->
+        <p>
+          State-of-the-art learning algorithms for deep neural networks (DNNs) impose
+          significant challenges for hardware implementations, particularly on
+          resource-constrained edge devices. This workshop brings together researchers
+          and practitioners across architecture, algorithms, devices, and applications
+          to discuss efficient on-chip learning and inference.
+        </p>
+        <p>
+          The workshop addresses the full stack — from emerging nanoelectronic devices
+          to neuromorphic architectures and energy-efficient learning algorithms — and
+          their deployment on intelligent mobile and edge platforms.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================== TOPICS ====================== -->
+    <section class="section section--alt" id="topics">
+      <div class="container">
+        <h2 class="section__title">Key Topics</h2>
+        <ul class="topics">
+          <li>Synaptic plasticity and neuron motifs of learning dynamics</li>
+          <li>Computational models of cortical activities</li>
+          <li>Sparse learning, feature extraction and personalization</li>
+          <li>Deep learning with high speed and high power efficiency</li>
+          <li>Hardware acceleration for machine learning</li>
+          <li>Hardware emulation of brain</li>
+          <li>Nanoelectronic devices and architectures for neuro-computing</li>
+          <li>Applications of learning on a smart mobile platform</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====================== SPEAKERS ====================== -->
+    <section class="section" id="speakers">
+      <div class="container">
+        <h2 class="section__title">Speakers</h2>
+        <!-- PLACEHOLDER speaker list borrowed from HALO 2020 — replace with ICCAD 2026 -->
+        <h3 class="subhead">Keynote</h3>
+        <div class="cards">
+          <article class="card"><h4>Mike Davies</h4><p>Intel</p></article>
+        </div>
+
+        <h3 class="subhead">Invited Speakers</h3>
+        <div class="cards">
+          <article class="card"><h4>Nathan McDonald</h4><p>Air Force Research Lab</p></article>
+          <article class="card"><h4>Priya Panda</h4><p>Yale University</p></article>
+          <article class="card"><h4>Travis Dewolf</h4><p>Applied Brain Research</p></article>
+          <article class="card"><h4>Hai (Helen) Li</h4><p>Duke University</p></article>
+          <article class="card"><h4>Deming Chen</h4><p>UIUC</p></article>
+          <article class="card"><h4>Yiyu Shi</h4><p>University of Notre Dame</p></article>
+          <article class="card"><h4>Yanzhi Wang</h4><p>Northeastern University</p></article>
+          <article class="card"><h4>Eriko Nurvitadhi</h4><p>Intel</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== PROGRAM ====================== -->
+    <section class="section section--alt" id="program">
+      <div class="container">
+        <h2 class="section__title">Preliminary Program</h2>
+        <!-- PLACEHOLDER schedule borrowed from HALO 2020 — replace with ICCAD 2026 -->
+
+        <div class="schedule">
+          <div class="slot">
+            <span class="slot__time">8:20 — 8:30</span>
+            <div class="slot__body"><p>Introduction and opening remarks</p></div>
+          </div>
+          <div class="slot slot--keynote">
+            <span class="slot__time">8:30 — 9:15</span>
+            <div class="slot__body">
+              <span class="tag">Keynote</span>
+              <p><strong>Mike Davies</strong> — Intel</p>
+              <p class="slot__talk">Progress and Challenges on the Path to Efficient Neuromorphic Learning</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="subhead">Session 1 — Architecture and Algorithm for On-Chip Learning <span class="chair">(Chair: Qinru Qiu)</span></h3>
+        <div class="schedule">
+          <div class="slot">
+            <span class="slot__time">9:15 — 9:40</span>
+            <div class="slot__body"><p><strong>Nathan McDonald</strong> — Air Force Research Lab</p><p class="slot__talk">Hyperdimensional Computing for Expeditionary Robotics</p></div>
+          </div>
+          <div class="slot">
+            <span class="slot__time">9:40 — 10:05</span>
+            <div class="slot__body"><p><strong>Priya Panda</strong> — Yale University</p><p class="slot__talk">Towards Energy-Efficient, Robust and Accurate Neural Computing</p></div>
+          </div>
+          <div class="slot">
+            <span class="slot__time">10:05 — 10:30</span>
+            <div class="slot__body"><p><strong>Travis Dewolf</strong> — Applied Brain Research</p><p class="slot__talk">Adaptive Neurorobotics using Nengo and the Loihi</p></div>
+          </div>
+          <div class="slot">
+            <span class="slot__time">10:30 — 10:55</span>
+            <div class="slot__body"><p><strong>Hai (Helen) Li</strong> — Duke University</p><p class="slot__talk">Efficient Deep Learning at Scale</p></div>
+          </div>
+          <div class="slot slot--break">
+            <span class="slot__time">10:55 — 11:10</span>
+            <div class="slot__body"><p>Discussion</p></div>
+          </div>
+        </div>
+
+        <h3 class="subhead">Session 2 — Intelligent Mobile Applications <span class="chair">(Chair: Yingyan Lin)</span></h3>
+        <div class="schedule">
+          <div class="slot">
+            <span class="slot__time">11:10 — 11:35</span>
+            <div class="slot__body"><p><strong>Deming Chen</strong> — UIUC</p><p class="slot__talk">VecQ: Minimal Loss DNN Model Compression</p></div>
+          </div>
+          <div class="slot">
+            <span class="slot__time">11:35 — 12:00</span>
+            <div class="slot__body"><p><strong>Yiyu Shi</strong> — University of Notre Dame</p><p class="slot__talk">Hardware/Software Co-Exploration of Deep Neural Architectures</p></div>
+          </div>
+          <div class="slot">
+            <span class="slot__time">12:00 — 12:25</span>
+            <div class="slot__body"><p><strong>Yanzhi Wang</strong> — Northeastern University</p><p class="slot__talk">Towards Best Possible Deep Learning Acceleration on the Edge</p></div>
+          </div>
+          <div class="slot">
+            <span class="slot__time">12:25 — 12:50</span>
+            <div class="slot__body"><p><strong>Eriko Nurvitadhi</strong> — Intel</p><p class="slot__talk">FPGA-based Computing in the Era of AI and Big Data</p></div>
+          </div>
+          <div class="slot slot--break">
+            <span class="slot__time">12:50 — 1:05</span>
+            <div class="slot__body"><p>Discussion</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== COMMITTEE ====================== -->
+    <section class="section" id="committee">
+      <div class="container">
+        <h2 class="section__title">Organizing Committee</h2>
+        <!-- PLACEHOLDER committee borrowed from HALO 2020 — replace with ICCAD 2026 -->
+        <div class="committee">
+          <div class="committee__group">
+            <h3 class="subhead">Co-chairs</h3>
+            <ul>
+              <li>Qinru Qiu — Syracuse University</li>
+              <li>Yingyan Lin — Rice University</li>
+              <li>Chenchen Liu — UMBC</li>
+            </ul>
+          </div>
+          <div class="committee__group">
+            <h3 class="subhead">Steering Committee</h3>
+            <ul>
+              <li>Yu Cao — Arizona State University</li>
+              <li>Xin Li — Duke University</li>
+              <li>Jae-sun Seo — Arizona State University</li>
+            </ul>
+          </div>
+          <div class="committee__group committee__group--wide">
+            <h3 class="subhead">Technical Program Committee</h3>
+            <ul class="committee__tpc">
+              <li>Rob Aitken — ARM</li>
+              <li>Shawn Blanton — CMU</li>
+              <li>Sankar Basu — NSF</li>
+              <li>Yiran Chen — Duke University</li>
+              <li>Kailash Gopalakrishnan — IBM</li>
+              <li>Yiorgos Makris — UT Dallas</li>
+              <li>Kendel McCarley — Raytheon</li>
+              <li>Mustafa Ozdal — Bilkent University</li>
+              <li>Yanzhi Wang — Northeastern University</li>
+              <li>Yuan Xie — UC Santa Barbara</li>
+              <li>Jishen Zhao — UC San Diego</li>
+              <li>Qinru Qiu — Syracuse University</li>
+              <li>Yingyan Lin — Rice University</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Sponsored by ACM SIGDA</p>
+      <p class="footer__muted">ICCAD 2026 Workshop &middot; Placeholder content from HALO 2020 &middot; <a href="https://github.com/PopsicleTan/iccad-2026">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

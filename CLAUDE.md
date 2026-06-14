@@ -6,7 +6,7 @@
 ## 目标
 **GitHub Pages 静态会议网站**，正式上线地址（根域名形式，仿 iccad-halo.github.io）：
 
-### 🌐 正式地址：https://iccad-2026.github.io/
+### 🌐 正式地址：https://iccad2026.github.io/
 
 样式/结构参考 [iccad-halo.github.io](https://iccad-halo.github.io)（ICCAD HALO Workshop 2020）。
 
@@ -14,9 +14,9 @@
 
 ### 站 A：精致版（根域名）
 - 本地目录：`/home/tankaixin/program/web`（就是本文件所在目录）。
-- 仓库：`iccad-2026/iccad-2026.github.io`（组织名下），remote 名 **`gh-pages`**。
+- 仓库：`iccad2026/iccad2026.github.io`（组织 iccad2026 名下），remote 名 **`gh-pages`**。
 - 风格：现代深蓝 + 卡片 + sticky 导航（`css/style.css` + `js/main.js`）。
-- 🌐 **https://iccad-2026.github.io/**
+- 🌐 **https://iccad2026.github.io/**
 - 更新：在本目录改文件 → `git push gh-pages main`。
 
 ### 站 B：朴素复刻版（项目页，带路径）
@@ -51,7 +51,7 @@
 - [x] git remote：`gh-pages`（正式，组织仓库）+ `origin`（旧项目仓库），
       凭证走 `gh auth setup-git`（账号 PopsicleTan）。
 
-**🌐 线上地址：https://iccad-2026.github.io/**
+**🌐 线上地址：https://iccad2026.github.io/**
 
 ## 下一步（待办）
 1. **替换占位内容**为 ICCAD 2026 真实信息：日期、地点、scope、speakers、program、committee

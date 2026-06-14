@@ -20,17 +20,22 @@
 - `js/main.js` — 移动端导航开关。
 - `README.md` — 本地预览 + 部署说明。
 
-## 当前状态（截至 2026-06-13）
+## 当前状态（截至 2026-06-14）
 - [x] 站点骨架 + 样式完成，本地可预览（`python3 -m http.server 8000`）。
 - [x] 内容**暂用 HALO 2020 占位**，已在 HTML 里用 `PLACEHOLDER` / `TODO` 注释标记。
-- [ ] 仓库 `iccad-2026` 当前为空，**尚未 git init / push / 开 Pages**。
+- [x] **已部署上线**：push 到 `PopsicleTan/iccad-2026` (main 分支)，GitHub Pages 已开启
+      (main / root)，线上验证 HTTP 200。
+- [x] git remote `origin` 已配，凭证走 `gh auth setup-git`（账号 PopsicleTan）。
+
+**🌐 线上地址：https://popsicletan.github.io/iccad-2026/**
 
 ## 下一步（待办）
 1. **替换占位内容**为 ICCAD 2026 真实信息：日期、地点、scope、speakers、program、committee
    —— 在 `index.html` 里搜 `PLACEHOLDER` 和 `TODO`，以及 hero 区的日期/地点。
-2. **部署**：`git init` → commit → push 到 `PopsicleTan/iccad-2026` →
-   GitHub Settings → Pages → Source: `main` / root。详见 `README.md`。
-3. 可选：换 logo/favicon、加 registration/CFP 链接、加往届年份导航。
+   （用户说内容待其确认后再给，按清单逐项替换。）
+2. 可选：换 logo/favicon、加 registration/CFP 链接、加往届年份导航。
+3. 日常更新流程：改完 `git add -A && git commit -m "..." && git push`，
+   Pages 自动重建，约 1–2 分钟生效。
 
 ## 决策记录
 - GitHub Pages 走 **项目页(project page)** 形式，URL 带 `/iccad-2026/` 路径，

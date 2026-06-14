@@ -4,10 +4,21 @@
 > 说一句"继续之前的工作"，即可自动读到此文件并接着干。
 
 ## 目标
-为仓库 [PopsicleTan/iccad-2026](https://github.com/PopsicleTan/iccad-2026) 做一个
-**GitHub Pages 静态会议网站**，上线地址将是
-`https://popsicletan.github.io/iccad-2026/`。
+**GitHub Pages 静态会议网站**，正式上线地址（根域名形式，仿 iccad-halo.github.io）：
+
+### 🌐 正式地址：https://iccad-2026.github.io/
+
 样式/结构参考 [iccad-halo.github.io](https://iccad-halo.github.io)（ICCAD HALO Workshop 2020）。
+
+## 仓库与部署架构（重要）
+- **正式站仓库**：`iccad-2026/iccad-2026.github.io`（组织 `iccad-2026` 名下，PopsicleTan 是 owner）。
+  仓库名 == `<组织名>.github.io`，所以 Pages 挂在根域名 `https://iccad-2026.github.io/`。
+  本地 git remote 名为 **`gh-pages`** → 这是**正式发布的 remote**。
+- **旧项目仓库**：`PopsicleTan/iccad-2026`（remote 名 `origin`），地址带路径
+  `https://popsicletan.github.io/iccad-2026/`。**已冗余**，可保留也可删除。
+- 日常更新只推 `gh-pages`：`git push gh-pages main`。
+- GitHub Pages 域名规则：`https://<账号名>.github.io/<仓库名>/`；仓库名 == `<账号>.github.io`
+  时才挂根域名。账号名决定域名，仓库名只在斜杠后。
 
 ## 技术选型
 - 纯静态 HTML + CSS + 少量 JS，**无构建步骤**（最省心、GitHub Pages 直接托管）。
@@ -23,11 +34,12 @@
 ## 当前状态（截至 2026-06-14）
 - [x] 站点骨架 + 样式完成，本地可预览（`python3 -m http.server 8000`）。
 - [x] 内容**暂用 HALO 2020 占位**，已在 HTML 里用 `PLACEHOLDER` / `TODO` 注释标记。
-- [x] **已部署上线**：push 到 `PopsicleTan/iccad-2026` (main 分支)，GitHub Pages 已开启
-      (main / root)，线上验证 HTTP 200。
-- [x] git remote `origin` 已配，凭证走 `gh auth setup-git`（账号 PopsicleTan）。
+- [x] **已部署上线**到根域名：建组织 `iccad-2026` → 仓库 `iccad-2026.github.io` →
+      push → Pages 自动开启 → 线上验证 HTTP 200。
+- [x] git remote：`gh-pages`（正式，组织仓库）+ `origin`（旧项目仓库），
+      凭证走 `gh auth setup-git`（账号 PopsicleTan）。
 
-**🌐 线上地址：https://popsicletan.github.io/iccad-2026/**
+**🌐 线上地址：https://iccad-2026.github.io/**
 
 ## 下一步（待办）
 1. **替换占位内容**为 ICCAD 2026 真实信息：日期、地点、scope、speakers、program、committee

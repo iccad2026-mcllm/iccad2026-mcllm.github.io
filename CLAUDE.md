@@ -10,15 +10,27 @@
 
 样式/结构参考 [iccad-halo.github.io](https://iccad-halo.github.io)（ICCAD HALO Workshop 2020）。
 
-## 仓库与部署架构（重要）
-- **正式站仓库**：`iccad-2026/iccad-2026.github.io`（组织 `iccad-2026` 名下，PopsicleTan 是 owner）。
-  仓库名 == `<组织名>.github.io`，所以 Pages 挂在根域名 `https://iccad-2026.github.io/`。
-  本地 git remote 名为 **`gh-pages`** → 这是**正式发布的 remote**。
-- **旧项目仓库**：`PopsicleTan/iccad-2026`（remote 名 `origin`），地址带路径
-  `https://popsicletan.github.io/iccad-2026/`。**已冗余**，可保留也可删除。
-- 日常更新只推 `gh-pages`：`git push gh-pages main`。
-- GitHub Pages 域名规则：`https://<账号名>.github.io/<仓库名>/`；仓库名 == `<账号>.github.io`
-  时才挂根域名。账号名决定域名，仓库名只在斜杠后。
+## 仓库与部署架构（重要）—— 目前有【两个站、两种风格】
+
+### 站 A：精致版（根域名）
+- 本地目录：`/home/tankaixin/program/web`（就是本文件所在目录）。
+- 仓库：`iccad-2026/iccad-2026.github.io`（组织名下），remote 名 **`gh-pages`**。
+- 风格：现代深蓝 + 卡片 + sticky 导航（`css/style.css` + `js/main.js`）。
+- 🌐 **https://iccad-2026.github.io/**
+- 更新：在本目录改文件 → `git push gh-pages main`。
+
+### 站 B：朴素复刻版（项目页，带路径）
+- 本地目录：`/home/tankaixin/program/web-plain`（独立 clone，避免和站 A 混）。
+- 仓库：`PopsicleTan/iccad-2026`，remote 名 **`origin`**（在 web-plain 里就是 origin）。
+- 风格：**极简学术风、纯文字、Times 衬线、单栏**，仿原参考站 iccad-halo（无 JS）。
+- 🌐 **https://popsicletan.github.io/iccad-2026/**
+- 更新：在 `web-plain` 目录改文件 → `git push origin main`。
+- ⚠️ 注意：`web` 目录里的 `origin` 仍指向同一旧仓库，但内容是精致版；**不要**从 `web`
+  目录推 `origin`，否则会把朴素版覆盖回精致版。改朴素版一律去 `web-plain`。
+
+### GitHub Pages 域名规则备忘
+`https://<账号名>.github.io/<仓库名>/`；仓库名 == `<账号>.github.io` 时才挂根域名。
+账号名决定域名，仓库名只在斜杠后。
 
 ## 技术选型
 - 纯静态 HTML + CSS + 少量 JS，**无构建步骤**（最省心、GitHub Pages 直接托管）。

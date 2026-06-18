@@ -10,23 +10,27 @@
 
 样式/结构参考 [iccad-halo.github.io](https://iccad-halo.github.io)（ICCAD HALO Workshop 2020）。
 
-## 仓库与部署架构（重要）—— 目前有【两个站、两种风格】
+## 仓库与部署架构（重要）
 
-### 站 A：精致版（根域名）
+### ⭐ 站 A：精致版（根域名）—— 唯一在维护的站，主战场
 - 本地目录：`/home/tankaixin/program/web`（就是本文件所在目录）。
-- 仓库：`iccad2026/iccad2026.github.io`（组织 iccad2026 名下），remote 名 **`gh-pages`**。
+- 仓库：`iccad2026/iccad2026.github.io`（**组织 iccad2026** 名下，owner=PopsicleTan）。
+- 可见性：**public（公开）**；组织套餐 free。Pages 从 main 根目录发布。
+- remote 名 **`gh-pages`**。
 - 风格：现代深蓝 + 卡片 + sticky 导航（`css/style.css` + `js/main.js`）。
 - 🌐 **https://iccad2026.github.io/**
-- 更新：在本目录改文件 → `git push gh-pages main`。
+- 更新：在本目录改文件 → `git add -A && git commit -m "..." && git push gh-pages main`。
 
-### 站 B：朴素复刻版（项目页，带路径）
-- 本地目录：`/home/tankaixin/program/web-plain`（独立 clone，避免和站 A 混）。
-- 仓库：`PopsicleTan/iccad-2026`，remote 名 **`origin`**（在 web-plain 里就是 origin）。
-- 风格：**极简学术风、纯文字、Times 衬线、单栏**，仿原参考站 iccad-halo（无 JS）。
-- 🌐 **https://popsicletan.github.io/iccad-2026/**
-- 更新：在 `web-plain` 目录改文件 → `git push origin main`。
-- ⚠️ 注意：`web` 目录里的 `origin` 仍指向同一旧仓库，但内容是精致版；**不要**从 `web`
-  目录推 `origin`，否则会把朴素版覆盖回精致版。改朴素版一律去 `web-plain`。
+### 🧊 站 B：朴素复刻版 —— 【已冻结，不再修改/更新】
+- 本地目录：`/home/tankaixin/program/web-plain`；仓库 `PopsicleTan/iccad-2026`（remote `origin`）。
+- 内容：iccad-halo.github.io 的 100% 逐字节复刻（原 HTML + 10 张图片）。
+- 🌐 https://popsicletan.github.io/iccad-2026/
+- **状态：用户决定不再动它。** 后续所有工作只针对站 A，**不要**再推 `origin` / 改 `web-plain`。
+
+### 能否设为 private（站 A）
+- 免费组织套餐下，Pages 只能从 **public 仓库**发布；改 private 会导致网站下线。
+- 想「源码私有 + 网站公开」需升级 **GitHub Team**（付费）；想「网站本身也私有」需 **Enterprise**。
+- 现状保持 public。
 
 ### GitHub Pages 域名规则备忘
 `https://<账号名>.github.io/<仓库名>/`；仓库名 == `<账号>.github.io` 时才挂根域名。

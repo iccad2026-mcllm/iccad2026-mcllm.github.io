@@ -57,13 +57,23 @@
 
 **🌐 线上地址：https://iccad2026.github.io/**
 
-## 下一步（待办）
-1. **替换占位内容**为 ICCAD 2026 真实信息：日期、地点、scope、speakers、program、committee
-   —— 在 `index.html` 里搜 `PLACEHOLDER` 和 `TODO`，以及 hero 区的日期/地点。
-   （用户说内容待其确认后再给，按清单逐项替换。）
-2. 可选：换 logo/favicon、加 registration/CFP 链接、加往届年份导航。
-3. 日常更新流程：改完 `git add -A && git commit -m "..." && git push`，
-   Pages 自动重建，约 1–2 分钟生效。
+## 0618 更新已完成（站 A）
+- 标题改为 **ICCAD 2026 Workshop: Memory-Centric Computing for LLM Inference**，
+  「方案4 描边双色」特效（Righteous 字体，金填充+白描边+蓝投影），高亮 **ICCAD / M / C / LLM**
+  （`.hero__title--fx .hl`，全大写）。
+- 日期：Thursday, November 12, 2026；已删地点行；保留 eyebrow「Workshop · Co-located with ICCAD 2026」。
+- General Information：换成 LLM / memory-centric computing 正式正文（英文两段，真实内容）。
+- Preliminary Program：**可点击弹窗**（`.slot--link` + `#talkModal` + js/main.js），只到 Session 1，时间不变。
+- Speakers / Key Topics / 部分 Committee：占位（姓名=Wu Yifan，单位=（占位大学），议题=（关键议题占位 N））。
+- Organizing Committee 真实：Organizers = Chenchen Liu (Beihang University)、Xiaoxuan Yang (Virginia University)。
+- 页脚：Sponsored by（赞助单位占位）；「Content from ICAS Lab」；已删 GitHub 链接。
+- 占位头像：`images/wuyifan.svg`（临时）。
+
+## 待办 / 待用户提供
+1. **Wu Yifan 真实照片**：用户要用「pepe 人教版 wuyifan」照片，我无法自动获取。用户给图片文件后替换 `images/wuyifan.svg`。
+2. 副标题 `Hardware and Algorithms for Learning On-a-chip` 仍是 HALO 占位，待新副标题。
+3. 其余占位（议题×8、占位大学、报告标题、分会场主题、赞助单位等）待真实内容逐项替换。
+4. 日常更新：在 `web` 目录改文件 → `git add -A && git commit -m "..." && git push gh-pages main`，约 1–2 分钟生效。
 
 ## 决策记录
 - GitHub Pages 走 **项目页(project page)** 形式，URL 带 `/iccad-2026/` 路径，

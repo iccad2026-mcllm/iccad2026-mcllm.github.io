@@ -63,6 +63,15 @@ a:hover { text-decoration: underline; }
 /* 正文行宽控制，提升可读性与留白（仅作用于 section 直属段落，如 About / 提示语） */
 .section > .container > p { max-width: 72ch; margin: 0 0 18px; }
 .section > .container > p:last-child { margin-bottom: 0; }
+
+/* General Information：整列居中 + 两端对齐 + 标题居中，更规整美观 */
+#about .section__title { text-align: center; }
+#about .section__title::after { left: 50%; transform: translateX(-50%); }
+#about .container > p {
+  max-width: 800px; margin: 0 auto 20px;
+  text-align: justify; line-height: 1.85; color: #2b333d;
+}
+#about .container > p:last-child { margin-bottom: 0; }
 .section__title {
   font-size: 1.9rem; margin: 0 0 28px; color: var(--navy);
   position: relative; padding-bottom: 12px;

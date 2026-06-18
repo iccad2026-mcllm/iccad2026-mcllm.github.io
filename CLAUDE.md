@@ -63,7 +63,8 @@
 
 ## 0618 后续微调（已上线）
 - 标题方案4 + 副标题方案4（副标题文字现为「（副标题占位）」）。
-- 节目表：**全部居中**，无右侧箭头（仍可点击弹窗）；结构 = Keynote → Session 1（3 talk）→ Break(15min) → Session 2（3 talk）。
+- 全站美学：**统一左对齐（学术风）**，Hero/Footer 保持居中；正文区均左对齐、标题带左侧蓝短线。
+- 节目表：**左对齐**（时间列 118px + 右侧 `›` 箭头，可点击弹窗）；结构 = Keynote → Session 1（3 talk）→ Break(15min) → Session 2（3 talk）。
 - 讲者/节目姓名统一占位「（姓名占位）」（不再用 Wu Yifan）；单位「（占位大学）」。
 - 组委会只剩 Organizers（Chenchen Liu / Xiaoxuan Yang）。
 - 页脚仅「ICCAD 2026 Workshop」（已删赞助、删 ICAS Lab、删 GitHub 链接）。

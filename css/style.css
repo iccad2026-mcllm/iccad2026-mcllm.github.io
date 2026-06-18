@@ -117,6 +117,65 @@ a:hover { text-decoration: underline; }
 .footer__muted { color: #7e9bc4; font-size: .85rem; }
 .footer a { color: #acc6ec; }
 
+/* ===== Title FX (方案4 描边双色 + 全大写高亮) ===== */
+.hero__title--fx {
+  font-family: "Righteous", "Sora", sans-serif;
+  line-height: 1.32;
+  font-weight: 400;
+}
+.hero__title--fx .hl {
+  color: #ffd14d;
+  -webkit-text-stroke: 1.5px #fff;
+  paint-order: stroke fill;
+  text-shadow: 3px 3px 0 rgba(47, 128, 237, .55);
+  text-transform: uppercase;
+  font-size: 1.12em;
+  letter-spacing: .5px;
+}
+
+/* ===== Speaker card photos ===== */
+.card--speaker { text-align: center; }
+.card__photo {
+  width: 84px; height: 84px; border-radius: 50%;
+  object-fit: cover; background: #e6edf6; margin: 0 auto 10px; display: block;
+  border: 2px solid var(--line);
+}
+
+/* ===== Clickable program slots ===== */
+.program__hint { color: var(--muted); font-size: .9rem; margin: 0 0 16px; }
+button.slot {
+  width: 100%; text-align: left; font: inherit; cursor: pointer;
+}
+.slot--link { transition: box-shadow .15s ease, transform .15s ease; }
+.slot--link:hover { box-shadow: 0 6px 18px rgba(13, 43, 78, .12); transform: translateY(-2px); }
+.slot--link::after {
+  content: "›"; margin-left: auto; align-self: center;
+  color: var(--accent); font-size: 1.4rem; font-weight: 700;
+}
+
+/* ===== Modal ===== */
+.modal { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; }
+.modal[hidden] { display: none; }
+.modal__backdrop { position: absolute; inset: 0; background: rgba(8, 22, 42, .6); }
+.modal__dialog {
+  position: relative; z-index: 1; background: #fff; border-radius: 14px;
+  max-width: 440px; width: calc(100% - 40px); padding: 30px 28px; text-align: center;
+  box-shadow: 0 20px 60px rgba(8, 22, 42, .35);
+}
+.modal__close {
+  position: absolute; top: 10px; right: 14px; border: 0; background: none;
+  font-size: 1.8rem; line-height: 1; color: var(--muted); cursor: pointer;
+}
+.modal__photo {
+  width: 110px; height: 110px; border-radius: 50%; object-fit: cover;
+  background: #e6edf6; margin: 0 auto 14px; display: block; border: 2px solid var(--line);
+}
+.modal__time { color: var(--accent); font-weight: 600; margin: 0 0 4px; font-variant-numeric: tabular-nums; }
+.modal__name { color: var(--navy); margin: 0 0 2px; font-size: 1.3rem; }
+.modal__role { color: var(--muted); margin: 0 0 14px; font-size: .9rem; }
+.modal__talk { font-weight: 600; color: var(--ink); margin: 0 0 10px; }
+.modal__abstract { color: var(--muted); font-size: .92rem; margin: 0; }
+
 /* ===== Responsive ===== */
 @media (max-width: 720px) {
   .nav__links {

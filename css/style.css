@@ -96,6 +96,8 @@ a:hover { text-decoration: underline; }
   border-left: 4px solid var(--accent); border-radius: 8px; padding: 16px 20px;
 }
 .slot--keynote { border-left-color: #e2a93b; background: #fffaf0; }
+.slot--break { border-left-color: var(--muted); background: #fafbfc; color: var(--muted); padding: 12px 20px; }
+.slot--break .slot__body { font-style: italic; }
 .slot__time { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--navy); }
 .slot__body p { margin: 0; }
 .slot__talk { color: var(--muted); font-size: .92rem; margin-top: 2px !important; }
@@ -107,6 +109,7 @@ a:hover { text-decoration: underline; }
 
 /* ===== Committee ===== */
 .committee { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 40px; }
+.committee--single { display: block; max-width: 480px; }
 .committee__group--wide { grid-column: 1 / -1; }
 .committee ul { list-style: none; padding: 0; margin: 0; }
 .committee li { padding: 5px 0; border-bottom: 1px dashed var(--line); color: var(--ink); }

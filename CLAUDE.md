@@ -6,7 +6,11 @@
 ## 目标
 **GitHub Pages 静态会议网站**，正式上线地址（根域名形式，仿 iccad-halo.github.io）：
 
-### 🌐 正式地址：https://iccad2026.github.io/
+### 🌐 正式地址：https://iccad2026-mcllm.github.io/
+
+> ⚠️ 网址历经多次改名（iccad-2026 → iccad2026 → **iccad2026-mcllm**）。当前唯一有效域名是
+> **https://iccad2026-mcllm.github.io/**，旧的 iccad2026.github.io / iccad-2026.github.io 均已失效。
+> 规则：每次在 GitHub 改**组织名**，必须把仓库也改成 `<组织名>.github.io` 配套，否则根域名 404。
 
 样式/结构参考 [iccad-halo.github.io](https://iccad-halo.github.io)（ICCAD HALO Workshop 2020）。
 
@@ -14,7 +18,7 @@
 
 ### ⭐ 站 A：精致版（根域名）—— 唯一在维护的站，主战场
 - 本地目录：`/home/tankaixin/program/web`（就是本文件所在目录）。
-- 仓库：`iccad2026/iccad2026.github.io`（**组织 iccad2026** 名下，owner=PopsicleTan）。
+- 仓库：`iccad2026-mcllm/iccad2026-mcllm.github.io`（**组织 iccad2026-mcllm** 名下，owner=PopsicleTan）。
 - 可见性：**public（公开）**；组织套餐 free。Pages 从 main 根目录发布。
 - remote 名 **`gh-pages`**。
 - 风格：现代深蓝 + 卡片 + sticky 导航（`css/style.css` + `js/main.js`）。
@@ -55,7 +59,16 @@
 - [x] git remote：`gh-pages`（正式，组织仓库）+ `origin`（旧项目仓库），
       凭证走 `gh auth setup-git`（账号 PopsicleTan）。
 
-**🌐 线上地址：https://iccad2026.github.io/**
+**🌐 线上地址：https://iccad2026-mcllm.github.io/**
+
+## 0618 后续微调（已上线）
+- 标题方案4 + 副标题方案4（副标题文字现为「（副标题占位）」）。
+- 节目表：**全部居中**，无右侧箭头（仍可点击弹窗）；结构 = Keynote → Session 1（3 talk）→ Break(15min) → Session 2（3 talk）。
+- 讲者/节目姓名统一占位「（姓名占位）」（不再用 Wu Yifan）；单位「（占位大学）」。
+- 组委会只剩 Organizers（Chenchen Liu / Xiaoxuan Yang）。
+- 页脚仅「ICCAD 2026 Workshop」（已删赞助、删 ICAS Lab、删 GitHub 链接）。
+- 已修复点击：CSS/JS 加 `?v=` 版本号清缓存（当前 v=20260618d）。
+- 移动端响应式 + JS 检测移动 UA 打 `is-mobile` 类。
 
 ## 0618 更新已完成（站 A）
 - 标题改为 **ICCAD 2026 Workshop: Memory-Centric Computing for LLM Inference**，

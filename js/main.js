@@ -1,3 +1,10 @@
+// Detect mobile UA and tag <html> with is-mobile / is-desktop.
+// （响应式主要靠 CSS 媒体查询；这个类只是给移动端额外微调留的钩子）
+(function () {
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent);
+  document.documentElement.classList.add(isMobile ? 'is-mobile' : 'is-desktop');
+})();
+
 // Mobile nav toggle
 document.querySelector('.nav__toggle')?.addEventListener('click', function () {
   document.querySelector('.nav__links')?.classList.toggle('open');

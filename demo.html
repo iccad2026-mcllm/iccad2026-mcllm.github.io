@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>标题特效方案预览 — ICCAD 2026 Workshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Audiowide&family=Space+Grotesk:wght@400;600;700&family=Righteous&family=Sora:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: #0a1f3a; color: #fff;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      padding: 30px 20px 80px;
+    }
+    .intro { max-width: 900px; margin: 0 auto 30px; color: #bcd0ee; }
+    .intro h1 { color: #fff; font-size: 1.4rem; }
+    .opt {
+      max-width: 1000px; margin: 0 auto 26px; padding: 40px 36px;
+      background: linear-gradient(135deg, #0d2b4e 0%, #14457d 100%);
+      border-radius: 16px; border: 1px solid #1d4f8a;
+      text-align: center; overflow: hidden;
+    }
+    .opt__label {
+      display: inline-block; background: #2f80ed; color: #fff;
+      font-size: .8rem; font-weight: 700; letter-spacing: 1px;
+      padding: 4px 14px; border-radius: 20px; margin-bottom: 22px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: .75rem; color: #8fb3e0; margin: 0 0 14px; }
+    .subtitle { color: #cfe0f5; font-size: 1.05rem; margin: 16px 0 0; font-weight: 400; }
+    .desc { color: #9db8de; font-size: .85rem; margin-top: 18px; font-family: "Space Grotesk", sans-serif; }
+
+    /* ===== 方案 1：渐变高亮首字母 ===== */
+    .t1 { font-family: "Sora", sans-serif; font-weight: 800; font-size: 2.2rem; line-height: 1.3; margin: 0; }
+    .t1 .hl {
+      background: linear-gradient(90deg, #38e8ff, #2f80ed, #b06bff);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; font-weight: 800;
+    }
+    .t1 .acro { font-size: 1.15em; }
+
+    /* ===== 方案 2：霓虹发光（科技感）===== */
+    .t2 { font-family: "Orbitron", sans-serif; font-weight: 700; font-size: 1.9rem; line-height: 1.4; margin: 0; letter-spacing: 1px; }
+    .t2 .hl {
+      color: #5cf3ff;
+      text-shadow: 0 0 8px rgba(92,243,255,.8), 0 0 20px rgba(47,128,237,.6);
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .72; } }
+
+    /* ===== 方案 3：大号缩写 LOGO 锁定 ===== */
+    .t3-acro {
+      font-family: "Audiowide", sans-serif; font-size: 4rem; line-height: 1;
+      letter-spacing: 2px; margin: 6px 0 14px;
+      background: linear-gradient(120deg, #38e8ff 0%, #2f80ed 45%, #b06bff 100%);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .t3-full { font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 1.5rem; margin: 0; }
+
+    /* ===== 方案 4：描边双色（活泼）===== */
+    .t4 { font-family: "Righteous", sans-serif; font-size: 2.3rem; line-height: 1.3; margin: 0; }
+    .t4 .hl {
+      color: #ffd14d;
+      -webkit-text-stroke: 1.5px #fff;
+      paint-order: stroke fill;
+      text-shadow: 3px 3px 0 rgba(47,128,237,.55);
+    }
+  </style>
+</head>
+<body>
+  <div class="intro">
+    <h1>ICCAD 2026 Workshop — 标题特效字体方案预览</h1>
+    <p>下面 4 个方案，<b>ICCAD</b> 和 <b>MCLLM</b>（Memory-Centric computing for LLM）这几个字母做了特效高亮。
+       看哪个顺眼，告诉我方案号即可（也可以说"1 的配色 + 3 的布局"这种组合）。</p>
+  </div>
+
+  <!-- 方案 1 -->
+  <section class="opt">
+    <span class="opt__label">方案 1 · 渐变高亮首字母</span>
+    <p class="eyebrow">Workshop · Co-located with ICCAD 2026</p>
+    <h2 class="t1">
+      <span class="hl acro">ICCAD</span> 2026 Workshop:<br>
+      <span class="hl">M</span>emory-<span class="hl">C</span>entric Computing for <span class="hl">LLM</span> Inference
+    </h2>
+    <p class="desc">青→蓝→紫渐变填充高亮字母，干净现代，和站点深蓝主色一致。</p>
+  </section>
+
+  <!-- 方案 2 -->
+  <section class="opt">
+    <span class="opt__label">方案 2 · 霓虹发光（科技感）</span>
+    <p class="eyebrow">Workshop · Co-located with ICCAD 2026</p>
+    <h2 class="t2">
+      <span class="hl">ICCAD</span> 2026 WORKSHOP<br>
+      <span class="hl">M</span>EMORY-<span class="hl">C</span>ENTRIC COMPUTING FOR <span class="hl">LLM</span>
+    </h2>
+    <p class="desc">Orbitron 科技字体 + 霓虹辉光 + 轻微呼吸动画，最"灵动"、最有 AI 硬件味。</p>
+  </section>
+
+  <!-- 方案 3 -->
+  <section class="opt">
+    <span class="opt__label">方案 3 · 大号缩写 LOGO</span>
+    <p class="eyebrow">ICCAD 2026 Workshop</p>
+    <div class="t3-acro">ICCAD · MC-LLM</div>
+    <p class="t3-full">Memory-Centric Computing for LLM Inference</p>
+    <p class="desc">把缩写做成超大渐变 LOGO 居中，下面跟全称。最醒目、最像"会议品牌标志"。</p>
+  </section>
+
+  <!-- 方案 4 -->
+  <section class="opt">
+    <span class="opt__label">方案 4 · 描边双色（活泼）</span>
+    <p class="eyebrow">Workshop · Co-located with ICCAD 2026</p>
+    <h2 class="t4">
+      <span class="hl">ICCAD</span> 2026 Workshop:<br>
+      <span class="hl">M</span>emory-<span class="hl">C</span>entric Computing for <span class="hl">LLM</span> Inference
+    </h2>
+    <p class="desc">金色填充 + 白色描边 + 投影，俏皮活泼，对比最强。</p>
+  </section>
+
+</body>
+</html>

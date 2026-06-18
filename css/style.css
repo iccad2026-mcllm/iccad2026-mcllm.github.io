@@ -64,14 +64,8 @@ a:hover { text-decoration: underline; }
 .section > .container > p { max-width: 72ch; margin: 0 0 18px; }
 .section > .container > p:last-child { margin-bottom: 0; }
 
-/* General Information：整列居中 + 两端对齐 + 标题居中，更规整美观 */
-#about .section__title { text-align: center; }
-#about .section__title::after { left: 50%; transform: translateX(-50%); }
-#about .container > p {
-  max-width: 800px; margin: 0 auto 20px;
-  text-align: justify; line-height: 1.85; color: #2b333d;
-}
-#about .container > p:last-child { margin-bottom: 0; }
+/* General Information：左对齐（全站统一学术风），仅加大行高/字色 */
+#about .container > p { line-height: 1.85; color: #2b333d; }
 .section__title {
   font-size: 1.9rem; margin: 0 0 28px; color: var(--navy);
   position: relative; padding-bottom: 12px;
@@ -87,7 +81,7 @@ a:hover { text-decoration: underline; }
 .topics { columns: 2; gap: 32px; padding-left: 20px; margin: 0; }
 .topics li { margin: 0 0 10px; break-inside: avoid; }
 
-/* ===== Cards (speakers) ===== */
+/* ===== Cards (speakers) —— 左对齐 ===== */
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
 .card {
   background: #fff; border: 1px solid var(--line); border-radius: 10px;
@@ -97,23 +91,27 @@ a:hover { text-decoration: underline; }
 .card h4 { margin: 0 0 4px; color: var(--navy); font-size: 1.05rem; }
 .card p { margin: 0; color: var(--muted); font-size: .9rem; }
 
-/* ===== Program（全部居中） ===== */
+/* ===== Program —— 左对齐（时间列 + 正文） ===== */
 .schedule { display: flex; flex-direction: column; gap: 10px; }
 .slot {
-  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px;
+  display: flex; gap: 22px; align-items: flex-start;
   background: #fff; border: 1px solid var(--line);
-  border-left: 4px solid var(--accent); border-radius: 8px; padding: 16px 20px;
+  border-left: 4px solid var(--accent); border-radius: 8px; padding: 14px 20px;
 }
 .slot--keynote { border-left-color: #e2a93b; background: #fffaf0; }
 .slot--break { border-left-color: var(--muted); background: #fafbfc; color: var(--muted); padding: 12px 20px; }
 .slot--break .slot__body { font-style: italic; }
-.slot__time { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--navy); }
+.slot__time {
+  font-variant-numeric: tabular-nums; font-weight: 600; color: var(--navy);
+  width: 118px; min-width: 118px; flex-shrink: 0; line-height: 1.5;
+}
+.slot__body { flex: 1; }
 .slot__body p { margin: 0; }
 .slot__talk { color: var(--muted); font-size: .92rem; margin-top: 2px !important; }
 .tag {
   display: inline-block; background: #e2a93b; color: #fff; font-size: .72rem;
   font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
-  padding: 2px 8px; border-radius: 4px; margin: 0 auto 4px;
+  padding: 2px 8px; border-radius: 4px; margin: 0 0 6px;
 }
 
 /* ===== Committee ===== */
@@ -156,21 +154,25 @@ a:hover { text-decoration: underline; }
   text-shadow: 2px 2px 0 rgba(47, 128, 237, .5);
 }
 
-/* ===== Speaker card photos ===== */
-.card--speaker { text-align: center; }
+/* ===== Speaker card photos —— 左对齐 ===== */
+.card--speaker { text-align: left; }
 .card__photo {
   width: 84px; height: 84px; border-radius: 50%;
-  object-fit: cover; background: #e6edf6; margin: 0 auto 10px; display: block;
+  object-fit: cover; background: #e6edf6; margin: 0 0 10px; display: block;
   border: 2px solid var(--line);
 }
 
-/* ===== Clickable program slots（居中布局，无箭头） ===== */
-.program__hint { color: var(--muted); font-size: .9rem; margin: 0 0 16px; text-align: center; }
+/* ===== Clickable program slots（左对齐 + 右侧箭头） ===== */
+.program__hint { color: var(--muted); font-size: .9rem; margin: 0 0 16px; }
 button.slot {
-  width: 100%; font: inherit; cursor: pointer;
+  width: 100%; text-align: left; font: inherit; cursor: pointer;
 }
 .slot--link { transition: box-shadow .15s ease, transform .15s ease; }
 .slot--link:hover { box-shadow: 0 6px 18px rgba(13, 43, 78, .12); transform: translateY(-2px); }
+.slot--link::after {
+  content: "›"; margin-left: auto; align-self: center;
+  color: var(--accent); font-size: 1.4rem; font-weight: 700;
+}
 
 /* ===== Modal ===== */
 .modal { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; }
@@ -226,7 +228,8 @@ button.slot {
   .topics, .committee__tpc { columns: auto; }
   .cards { grid-template-columns: 1fr 1fr; }
 
-  .slot { gap: 5px; padding: 14px 16px; }
+  .slot { gap: 14px; padding: 12px 16px; }
+  .slot__time { width: 96px; min-width: 96px; }
 }
 /* 小屏手机 */
 @media (max-width: 480px) {
@@ -237,6 +240,12 @@ button.slot {
 
   .cards { grid-template-columns: 1fr; }
   .card__photo { width: 72px; height: 72px; }
+
+  /* 节目行：窄屏改为时间在上、正文在下，箭头移到右上角 */
+  .slot { flex-direction: column; gap: 4px; }
+  .slot__time { width: auto; min-width: 0; }
+  .slot--link { position: relative; }
+  .slot--link::after { position: absolute; right: 16px; top: 14px; }
 
   .modal__dialog { padding: 26px 20px; }
 }

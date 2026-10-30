@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Righteous&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=20260619a" />
+  <link rel="stylesheet" href="css/style.css?v=20261030a" />
 </head>
 <body>
 
@@ -92,25 +92,41 @@
     <section class="section" id="speakers">
       <div class="container">
         <h2 class="section__title">Speakers</h2>
-        <!-- 占位：姓名统一 （姓名占位），单位统一占位大学 -->
         <h3 class="subhead">Keynote</h3>
         <div class="cards">
           <article class="card card--speaker">
-            <img class="card__photo" src="images/wuyifan.svg" alt="TBD" />
-            <h4>TBD</h4><p>TBD</p>
+            <img class="card__photo" src="images/jason-cong.png" alt="Jason Cong" loading="lazy" />
+            <h4>Jason Cong</h4><p>University of California, Los Angeles</p>
+            <button type="button" class="card__details" data-speaker="jason-cong" aria-haspopup="dialog" aria-label="View talk details for Jason Cong">Talk details <span aria-hidden="true">›</span></button>
           </article>
         </div>
-
         <h3 class="subhead">Invited Speakers</h3>
         <div class="cards">
-          <article class="card card--speaker"><img class="card__photo" src="images/wuyifan.svg" alt="TBD" /><h4>TBD</h4><p>TBD</p></article>
-          <article class="card card--speaker"><img class="card__photo" src="images/wuyifan.svg" alt="TBD" /><h4>TBD</h4><p>TBD</p></article>
-          <article class="card card--speaker"><img class="card__photo" src="images/wuyifan.svg" alt="TBD" /><h4>TBD</h4><p>TBD</p></article>
-          <article class="card card--speaker"><img class="card__photo" src="images/wuyifan.svg" alt="TBD" /><h4>TBD</h4><p>TBD</p></article>
-          <article class="card card--speaker"><img class="card__photo" src="images/wuyifan.svg" alt="TBD" /><h4>TBD</h4><p>TBD</p></article>
-          <article class="card card--speaker"><img class="card__photo" src="images/wuyifan.svg" alt="TBD" /><h4>TBD</h4><p>TBD</p></article>
-          <article class="card card--speaker"><img class="card__photo" src="images/wuyifan.svg" alt="TBD" /><h4>TBD</h4><p>TBD</p></article>
-          <article class="card card--speaker"><img class="card__photo" src="images/wuyifan.svg" alt="TBD" /><h4>TBD</h4><p>TBD</p></article>
+          <article class="card card--speaker">
+            <img class="card__photo" src="images/meng-li.jpeg" alt="Meng Li" loading="lazy" />
+            <h4>Meng Li</h4><p>Peking University</p>
+            <button type="button" class="card__details" data-speaker="meng-li" aria-haspopup="dialog" aria-label="View talk details for Meng Li">Talk details <span aria-hidden="true">›</span></button>
+          </article>
+          <article class="card card--speaker">
+            <img class="card__photo" src="images/cong-guo.png" alt="Cong Guo" loading="lazy" />
+            <h4>Cong Guo</h4><p>Meta</p>
+            <button type="button" class="card__details" data-speaker="cong-guo" aria-haspopup="dialog" aria-label="View talk details for Cong Guo">Talk details <span aria-hidden="true">›</span></button>
+          </article>
+          <article class="card card--speaker">
+            <img class="card__photo" src="images/yuan-liao.jpeg" alt="Yuan Liao" loading="lazy" />
+            <h4>Yuan Liao</h4>
+            <button type="button" class="card__details" data-speaker="yuan-liao" aria-haspopup="dialog" aria-label="View talk details for Yuan Liao">Talk details <span aria-hidden="true">›</span></button>
+          </article>
+          <article class="card card--speaker">
+            <img class="card__photo" src="images/zhenhua-zhu.png" alt="Zhenhua Zhu" loading="lazy" />
+            <h4>Zhenhua Zhu</h4><p>Tsinghua Shenzhen International Graduate School</p>
+            <button type="button" class="card__details" data-speaker="zhenhua-zhu" aria-haspopup="dialog" aria-label="View talk details for Zhenhua Zhu">Talk details <span aria-hidden="true">›</span></button>
+          </article>
+          <article class="card card--speaker">
+
+            <h4>Jiangnan Yu</h4><p>The Hong Kong University of Science and Technology</p>
+            <button type="button" class="card__details" data-speaker="jiangnan-yu" aria-haspopup="dialog" aria-label="View talk details for Jiangnan Yu">Talk details <span aria-hidden="true">›</span></button>
+          </article>
         </div>
       </div>
     </section>
@@ -119,68 +135,86 @@
     <section class="section section--alt" id="program">
       <div class="container">
         <h2 class="section__title">Preliminary Program</h2>
-        <p class="program__hint">Click any session with a speaker to view details.</p>
-
+        <p class="program__hint">08:30–12:10 · Click a talk to view its details and speaker biography.</p>
         <div class="schedule">
           <div class="slot">
-            <span class="slot__time">8:20 — 8:30</span>
-            <div class="slot__body"><p>Introduction and opening remarks</p></div>
+            <span class="slot__time">08:30–08:35<small>5 min</small></span>
+            <div class="slot__body"><p>Opening Remarks</p></div>
           </div>
-
-          <button type="button" class="slot slot--keynote slot--link"
-            data-name="TBD" data-role="Keynote" data-time="8:30 — 9:15" data-talk="TBD">
-            <span class="slot__time">8:30 — 9:15</span>
-            <div class="slot__body">
+          <button type="button" class="slot slot--link slot--keynote" aria-haspopup="dialog"
+            data-speaker="jason-cong" data-name="Jason Cong" data-role="Keynote"
+            data-time="08:35–09:20 · 45 min" data-affiliation="University of California, Los Angeles"
+            data-photo="images/jason-cong.png" data-talk="Architecting Memory for Efficient LLMs">
+            <span class="slot__time">08:35–09:20<small>45 min</small></span>
+            <span class="slot__body">
               <span class="tag">Keynote</span>
-              <p><strong>TBD</strong> — TBD</p>
-              <p class="slot__talk">TBD</p>
-            </div>
+              <span class="slot__speaker"><strong>Jason Cong</strong> — University of California, Los Angeles</span>
+              <span class="slot__talk">Architecting Memory for Efficient LLMs</span>
+            </span>
           </button>
-        </div>
-
-        <h3 class="subhead">Session 1 — TBD <span class="chair">(Chair: TBD)</span></h3>
-        <div class="schedule">
-          <button type="button" class="slot slot--link"
-            data-name="TBD" data-role="Invited Talk" data-time="9:15 — 9:40" data-talk="TBD">
-            <span class="slot__time">9:15 — 9:40</span>
-            <div class="slot__body"><p><strong>TBD</strong> — TBD</p><p class="slot__talk">TBD</p></div>
+          <button type="button" class="slot slot--link" aria-haspopup="dialog"
+            data-speaker="meng-li" data-name="Meng Li" data-role="Invited Talk 1"
+            data-time="09:20–09:50 · 30 min" data-affiliation="Peking University"
+            data-photo="images/meng-li.jpeg" data-talk="Towards Efficient LLM Inference through Hardware/Algorithm Co-Optimization">
+            <span class="slot__time">09:20–09:50<small>30 min</small></span>
+            <span class="slot__body">
+              <span class="slot__label">Invited Talk 1</span>
+              <span class="slot__speaker"><strong>Meng Li</strong> — Peking University</span>
+              <span class="slot__talk">Towards Efficient LLM Inference through Hardware/Algorithm Co-Optimization</span>
+            </span>
           </button>
-          <button type="button" class="slot slot--link"
-            data-name="TBD" data-role="Invited Talk" data-time="9:40 — 10:05" data-talk="TBD">
-            <span class="slot__time">9:40 — 10:05</span>
-            <div class="slot__body"><p><strong>TBD</strong> — TBD</p><p class="slot__talk">TBD</p></div>
+          <button type="button" class="slot slot--link" aria-haspopup="dialog"
+            data-speaker="cong-guo" data-name="Cong Guo" data-role="Invited Talk 2"
+            data-time="09:50–10:20 · 30 min" data-affiliation="Meta"
+            data-photo="images/cong-guo.png" data-talk="New Architectural Opportunities for LLM Quantization">
+            <span class="slot__time">09:50–10:20<small>30 min</small></span>
+            <span class="slot__body">
+              <span class="slot__label">Invited Talk 2</span>
+              <span class="slot__speaker"><strong>Cong Guo</strong> — Meta</span>
+              <span class="slot__talk">New Architectural Opportunities for LLM Quantization</span>
+            </span>
           </button>
-          <button type="button" class="slot slot--link"
-            data-name="TBD" data-role="Invited Talk" data-time="10:05 — 10:30" data-talk="TBD">
-            <span class="slot__time">10:05 — 10:30</span>
-            <div class="slot__body"><p><strong>TBD</strong> — TBD</p><p class="slot__talk">TBD</p></div>
-          </button>
-        </div>
-
-        <div class="schedule">
           <div class="slot slot--break">
-            <span class="slot__time">10:30 — 10:45</span>
-            <div class="slot__body"><p>Break (15 min)</p></div>
+            <span class="slot__time">10:20–10:35<small>15 min</small></span>
+            <div class="slot__body"><p>Coffee Break</p></div>
           </div>
-        </div>
-
-        <h3 class="subhead">Session 2 — TBD <span class="chair">(Chair: TBD)</span></h3>
-        <div class="schedule">
-          <button type="button" class="slot slot--link"
-            data-name="TBD" data-role="Invited Talk" data-time="10:45 — 11:10" data-talk="TBD">
-            <span class="slot__time">10:45 — 11:10</span>
-            <div class="slot__body"><p><strong>TBD</strong> — TBD</p><p class="slot__talk">TBD</p></div>
+          <button type="button" class="slot slot--link" aria-haspopup="dialog"
+            data-speaker="yuan-liao" data-name="Yuan Liao" data-role="Invited Talk 3"
+            data-time="10:35–11:05 · 30 min" data-affiliation=""
+            data-photo="images/yuan-liao.jpeg" data-talk="MiX: Micro-Inverted-Scaling for End-to-End Low-Bit Vision-Language Model Acceleration">
+            <span class="slot__time">10:35–11:05<small>30 min</small></span>
+            <span class="slot__body">
+              <span class="slot__label">Invited Talk 3</span>
+              <span class="slot__speaker"><strong>Yuan Liao</strong></span>
+              <span class="slot__talk">MiX: Micro-Inverted-Scaling for End-to-End Low-Bit Vision-Language Model Acceleration</span>
+            </span>
           </button>
-          <button type="button" class="slot slot--link"
-            data-name="TBD" data-role="Invited Talk" data-time="11:10 — 11:35" data-talk="TBD">
-            <span class="slot__time">11:10 — 11:35</span>
-            <div class="slot__body"><p><strong>TBD</strong> — TBD</p><p class="slot__talk">TBD</p></div>
+          <button type="button" class="slot slot--link" aria-haspopup="dialog"
+            data-speaker="zhenhua-zhu" data-name="Zhenhua Zhu" data-role="Invited Talk 4"
+            data-time="11:05–11:35 · 30 min" data-affiliation="Tsinghua Shenzhen International Graduate School"
+            data-photo="images/zhenhua-zhu.png" data-talk="Simulation, Compilation, and Deployment Optimization for Near-DRAM Processing Architectures">
+            <span class="slot__time">11:05–11:35<small>30 min</small></span>
+            <span class="slot__body">
+              <span class="slot__label">Invited Talk 4</span>
+              <span class="slot__speaker"><strong>Zhenhua Zhu</strong> — Tsinghua Shenzhen International Graduate School</span>
+              <span class="slot__talk">Simulation, Compilation, and Deployment Optimization for Near-DRAM Processing Architectures</span>
+            </span>
           </button>
-          <button type="button" class="slot slot--link"
-            data-name="TBD" data-role="Invited Talk" data-time="11:35 — 12:00" data-talk="TBD">
-            <span class="slot__time">11:35 — 12:00</span>
-            <div class="slot__body"><p><strong>TBD</strong> — TBD</p><p class="slot__talk">TBD</p></div>
+          <button type="button" class="slot slot--link" aria-haspopup="dialog"
+            data-speaker="jiangnan-yu" data-name="Jiangnan Yu" data-role="Invited Talk 5"
+            data-time="11:35–12:05 · 30 min" data-affiliation="The Hong Kong University of Science and Technology"
+            data-photo="" data-talk="Rethinking Data Movement in LLM Inference">
+            <span class="slot__time">11:35–12:05<small>30 min</small></span>
+            <span class="slot__body">
+              <span class="slot__label">Invited Talk 5</span>
+              <span class="slot__speaker"><strong>Jiangnan Yu</strong> — The Hong Kong University of Science and Technology</span>
+              <span class="slot__talk">Rethinking Data Movement in LLM Inference</span>
+            </span>
           </button>
+          <div class="slot">
+            <span class="slot__time">12:05–12:10<small>5 min</small></span>
+            <div class="slot__body"><p>Closing Remarks</p></div>
+          </div>
         </div>
       </div>
     </section>
@@ -214,15 +248,73 @@
     <div class="modal__backdrop" data-close></div>
     <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalName">
       <button class="modal__close" data-close aria-label="Close">&times;</button>
-      <img class="modal__photo" id="modalPhoto" src="images/wuyifan.svg" alt="" />
+      <img class="modal__photo" id="modalPhoto" alt="" hidden />
       <p class="modal__time" id="modalTime"></p>
       <h3 class="modal__name" id="modalName"></h3>
       <p class="modal__role" id="modalRole"></p>
       <p class="modal__talk" id="modalTalk"></p>
-      <p class="modal__abstract">TBD</p>
+      <div class="modal__details" id="modalDetails"></div>
     </div>
   </div>
 
-  <script src="js/main.js?v=20260619a"></script>
+    <template id="details-jason-cong">
+      <section class="modal__section">
+        <h4>Biography</h4>
+        <p>JASON CONG is the Volgenau Chair for Engineering Excellence Professor at the UCLA Computer Science Department (and a former department chair), with joint appointment from the Electrical and Computer Engineering Department. He is the director of Center for Domain-Specific Computing (CDSC) and the director of VLSI Architecture, Synthesis, and Technology (VAST) Laboratory. Dr. Cong’s research interests include novel architectures and compilation for customizable computing, synthesis of VLSI circuits and systems, and quantum computing. He has over 600 publications in these areas, including 20 best paper awards, and 6 papers in the FPGA and Reconfigurable Computing Hall of Fame. He and his former students co-founded AutoESL, which developed the most widely used high-level synthesis tool for FPGAs (renamed to Vivado HLS and Vitis HLS after Xilinx’s acquisition). He is member of the National Academy of Engineering, the American Academy of Arts and Sciences, and a Fellow of ACM, IEEE, and the National Academy of Inventors. He is recipient of the SIA University Research Award, the EDAA Achievement Award, He was honored for the IEEE Robert N. Noyce Medal “for fundamental contributions to electronic design automation and FPGA design methods” in 2022, the Phil Kaufman Award, the highest recognition in EDA, in 2024, and the ACM Chuck Thacker Breakthrough Award in 2025 “for fundamental contributions to the design and automation of field-programmable systems and customizable computing.”</p>
+      </section>
+  </template>
+  <template id="details-meng-li">
+      <section class="modal__section">
+        <h4>Abstract</h4>
+        <p>The rapid development of large language models (LLMs), e.g., ChatGPT, has brought significant technological innovations to fields such as Natural Language Processing (NLP) and multi-modal AI. However, the autoregressive decoding nature of LLMs, together with the scaling law, leads to severe memory and bandwidth bottlenecks. In this talk, we will focus on our recent works that leverage in-Flash and near-Flash computing to support state-of-the-art LLMs efficiently. We will also discuss the new opportunities and challenges associated with Flash-centric computing.</p>
+      </section>
+      <section class="modal__section">
+        <h4>Biography</h4>
+        <p>Dr. Meng Li joined the School of Integrated Circuits and the Institute for Artificial Intelligence at Peking University in 2022 as an Boya Young Fellow Assistant Professor. Prior to joining Peking University, he worked at Facebook’s Reality Labs in the United States as a Technical Lead, where he led the research on efficient AI algorithms and systems for AR glasses. He received his Ph.D. from the University of Texas at Austin in 2018 and his B.S. from Peking University in 2013. His research focuses on efficient and reliable multimodal AI acceleration hardware and systems. He has published over 130 papers in top-tier conferences and journals, with more than 10,000 citations. Additionally, he has been honored with numerous awards, including the ACM SIGDA Outstanding Young Faculty Award, Ant Group InTech Future Award, CCF Integrated Circuits Early Career Award, the European Design and Automation Association (EDAA) Outstanding Dissertation Award, etc.</p>
+      </section>
+  </template>
+  <template id="details-cong-guo">
+      <section class="modal__section">
+        <h4>Abstract</h4>
+        <p>Quantization has become an essential design consideration across the modern AI stack, from models and systems to hardware architectures and chips. Its role extends beyond reducing numerical precision: it increasingly shapes how computation is represented, organized, and executed. This talk examines quantization through three levels: numerical representation, hardware architecture, and computing paradigm. At the first level, the question is how to represent model values with fewer bits while preserving accuracy. At the second, the focus shifts from individual numbers to how representations and architectures can be designed together around model characteristics. At the third, quantization opens the possibility of rethinking computation itself: rather than reconstructing compressed values for conventional arithmetic, can we organize computation directly around their compressed representations? Drawing on our research across these levels, I will discuss how this progression creates new architectural opportunities for LLM inference.</p>
+      </section>
+      <section class="modal__section">
+        <h4>Biography</h4>
+        <p>Cong Guo is a Postdoctoral Researcher on the AI and Systems Co-Design team at Meta. Previously, he was a Postdoctoral Associate at Duke University, working with Professors Yiran Chen and Hai (Helen) Li. He received his Ph.D. in Computer Science from Shanghai Jiao Tong University in 2023. His research focuses on computer architecture and hardware–software co-design for efficient AI systems, particularly sparsity- and quantization-aware architectures and LLM inference. His work has received Best Paper nominations at HPCA 2026 and ASPLOS 2026, and an IEEE Micro Top Picks Honorable Mention in 2022.</p>
+      </section>
+  </template>
+  <template id="details-yuan-liao">
+      <section class="modal__section">
+        <h4>Abstract</h4>
+        <p>The deployment of Vision-Language Models (VLMs) on edge devices is severely bottlenecked by memory bandwidth, necessitating aggressive sub-8-bit quantization. Since edge accelerators are strictly constrained by area and power, they require end-to-end quantized models. However, the extreme dynamic range gap between multi-modal tokens causes standard block formats to suffer &quot;microscaling collapse,&quot; where a single massive outlier hijacks the shared exponent, underflowing surrounding elements and destroying attention maps. To break this bottleneck, we propose Micro-Inverted-Scaling (MiX), a novel format that mathematically inverts the microscaling paradigm: rather than grouping multiple mantissas under one shared exponent, MiX groups private, per-element exponents under a single shared mantissa. To handle asymmetric VLM outlier topologies, we introduce an adaptive dual-format (MiX-MX) inference framework. By algebraically factoring out the shared MiX mantissa, this framework maps to a custom accelerator, replacing multipliers with efficient shifters. Evaluated end-to-end on multiple VLMs, our 4.5-bit MiX formulation exhibits equivalent or superior accuracy on multi-modal benchmarks compared to NVFP4. Simultaneously, the MiX accelerator delivers a 25% improvement in area efficiency over the NVFP4 baseline and a 2.3-4.5x speedup with 1.4-2.9x energy reduction across models compared to the state-of-the-art accelerator Focus, proving the inverted-scaling datapath is physically superior for efficient VLM deployment.</p>
+      </section>
+      <section class="modal__section">
+        <h4>Biography</h4>
+        <p>Yuan Liao earned his Ph.D. in Electrical and Computer Engineering from Cornell University in 2026, following his B.S. and M.S. in Electrical Engineering from the University of Washington. His research explores the intersection of hardware-software co-design, with a specific focus on edge AI accelerator architecture and low-precision, approximate arithmetic unit microarchitectures.</p>
+      </section>
+  </template>
+  <template id="details-zhenhua-zhu">
+      <section class="modal__section">
+        <h4>Abstract</h4>
+        <p>Near-DRAM processing architectures (NDP) addresses the memory wall bottleneck by placing computation close to DRAM, exploiting high internal bandwidth and reducing off-chip data transfers. However, diverse NDP architectures differ in memory hierarchy, processing-unit placement, buffer design, dataflow constraints, and DRAM timing behavior, making efficient deployment difficult. This talk presents our work on simulation, compilation, and deployment optimization for NDP architectures. We first introduce UniNDP, a unified framework for architecture abstraction, instruction generation, cycle-level simulation, and design-space exploration across different NDP systems. We then discuss the challenges and opportunities of bringing NDP into the low-bit floating-point era, and present NDP compiler and data layout optimizations to improve end-to-end performance for low-bit floating-point data-based large language model inference.</p>
+      </section>
+      <section class="modal__section">
+        <h4>Biography</h4>
+        <p>Zhenhua Zhu is an Assistant Professor at Tsinghua Shenzhen International Graduate School (SIGS) and a Visiting Scholar at HKUST. He received his Ph.D. and B.S. degrees from the Department of Electronic Engineering, Tsinghua University, in 2024 and 2018, respectively. His research interests include processing-in-memory, near-memory computing, and domain-specific computer architectures. He has published more than 20 papers as the first/corresponding author, with over 2,400 citations. He has received HPCA 2025 Best Paper Honorable Mention Award and DATE 2023 Best Paper Nomination.</p>
+      </section>
+  </template>
+  <template id="details-jiangnan-yu">
+      <section class="modal__section">
+        <h4>Abstract</h4>
+        <p>Large language model (LLM) inference places growing pressure on memory bandwidth and capacity. Bringing computation closer to memory reduces transfer distance. However, the amount of data moved still depends on how weights are represented and how attention is executed. This talk examines a common design principle: exploit workload structure to determine what data to move, what intermediate results to materialize, and when to fetch them.</p>
+        <p>For model weights, I will discuss how McPAL maps unstructured sparsity onto multi-chiplet HBM-PIM and how Delta-MoE exploits shared expert structure to transfer deltas while keeping a common base in GPU memory. For attention, I will discuss how SwiftCIM combines tightly coupled ReRAM storage with SRAM-based digital computation and fused dataflows to reduce intermediate traffic, and how STS reuses draft-model attention signals to select and prefetch KV data while retaining the full cache. Together, these studies illustrate how workload structure can reshape data representation and execution across the memory hierarchy. I will conclude by examining when reduced data movement translates into end-to-end gains, accounting for the added computation and coordination costs as well as model accuracy.</p>
+      </section>
+      <section class="modal__section">
+        <h4>Biography</h4>
+        <p>Jiangnan Yu is a Ph.D. candidate in Electronic and Computer Engineering at The Hong Kong University of Science and Technology (HKUST), advised by Prof. Yuan Xie in the FACT Lab. Her research focuses on efficient LLM serving and memory-centric AI systems across the software–hardware boundary, including MoE serving, KV-cache movement, and PIM/CIM acceleration. She received her M.S. and B.S. in Microelectronics from Fudan University.</p>
+      </section>
+  </template>
+
+  <script src="js/main.js?v=20261030a"></script>
 </body>
 </html>

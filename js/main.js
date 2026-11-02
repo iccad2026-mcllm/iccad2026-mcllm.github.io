@@ -79,9 +79,16 @@ document.querySelectorAll('.nav__links a').forEach(function (link) {
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !modal.hidden) close();
     if (e.key === 'Tab' && !modal.hidden) {
-      // The close button is the only interactive element in the report dialog.
-      e.preventDefault();
-      closeButton.focus();
+      var focusable = dialog.querySelectorAll('button:not([disabled]), a[href]');
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 })();

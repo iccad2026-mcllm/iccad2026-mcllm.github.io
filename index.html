@@ -96,7 +96,7 @@
         <div class="cards">
           <article class="card card--speaker">
             <img class="card__photo" src="images/jason-cong.png" alt="Jason Cong" loading="lazy" />
-            <h4>Jason Cong</h4><p>University of California, Los Angeles</p>
+            <h4>Jason Cong</h4><p>UCLA Computer Science Department</p>
             <button type="button" class="card__details" data-speaker="jason-cong" aria-haspopup="dialog" aria-label="View talk details for Jason Cong">Talk details <span aria-hidden="true">›</span></button>
           </article>
         </div>
@@ -143,12 +143,12 @@
           </div>
           <button type="button" class="slot slot--link slot--keynote" aria-haspopup="dialog"
             data-speaker="jason-cong" data-name="Jason Cong" data-role="Keynote"
-            data-time="08:35–09:20 · 45 min" data-affiliation="University of California, Los Angeles"
+            data-time="08:35–09:20 · 45 min" data-affiliation="UCLA Computer Science Department"
             data-photo="images/jason-cong.png" data-talk="Architecting Memory for Efficient LLMs">
             <span class="slot__time">08:35–09:20<small>45 min</small></span>
             <span class="slot__body">
               <span class="tag">Keynote</span>
-              <span class="slot__speaker"><strong>Jason Cong</strong> — University of California, Los Angeles</span>
+              <span class="slot__speaker"><strong>Jason Cong</strong> — UCLA Computer Science Department</span>
               <span class="slot__talk">Architecting Memory for Efficient LLMs</span>
             </span>
           </button>
@@ -258,9 +258,17 @@
   </div>
 
     <template id="details-jason-cong">
+      <p>Director, Center for Domain-Specific Computing (CDSC)<br>
+        <a href="http://vast.cs.ucla.edu/people/faculty/jason-cong" target="_blank" rel="noopener noreferrer">Personal website</a>
+      </p>
+      <section class="modal__section">
+        <h4>Abstract</h4>
+        <p>As we move toward increasingly general and capable AI systems, <strong>efficiency is becoming as important as intelligence itself</strong>: One must achieve greater reasoning and learning capabilities under practical constraints of computation, memory, energy, latency, and cost.</p>
+        <p>In this talk, I shall first discuss how we design and optimize model memories for efficiency, including the hierarchical memory transformer (HMT) that leverages long-term memory to substantially improve the efficiency of long-context inference, selective memory decompression that decouples compact memory storage from decoder conditioning (SeDeM), and heterogeneous fine-grain heterogeneous acceleration of long-memory processing pipeline. Then, I shall discuss our research on how to use the physical memories to improve model efficiency, including LUT-LLM, which performs most operations by memory table-lookup. Together, these efforts advance our goal towards efficient general intelligence (EGI).</p>
+      </section>
       <section class="modal__section">
         <h4>Biography</h4>
-        <p>JASON CONG is the Volgenau Chair for Engineering Excellence Professor at the UCLA Computer Science Department (and a former department chair), with joint appointment from the Electrical and Computer Engineering Department. He is the director of Center for Domain-Specific Computing (CDSC) and the director of VLSI Architecture, Synthesis, and Technology (VAST) Laboratory. Dr. Cong’s research interests include novel architectures and compilation for customizable computing, synthesis of VLSI circuits and systems, and quantum computing. He has over 600 publications in these areas, including 20 best paper awards, and 6 papers in the FPGA and Reconfigurable Computing Hall of Fame. He and his former students co-founded AutoESL, which developed the most widely used high-level synthesis tool for FPGAs (renamed to Vivado HLS and Vitis HLS after Xilinx’s acquisition). He is member of the National Academy of Engineering, the American Academy of Arts and Sciences, and a Fellow of ACM, IEEE, and the National Academy of Inventors. He is recipient of the SIA University Research Award, the EDAA Achievement Award, He was honored for the IEEE Robert N. Noyce Medal “for fundamental contributions to electronic design automation and FPGA design methods” in 2022, the Phil Kaufman Award, the highest recognition in EDA, in 2024, and the ACM Chuck Thacker Breakthrough Award in 2025 “for fundamental contributions to the design and automation of field-programmable systems and customizable computing.”</p>
+        <p><strong>JASON CONG</strong> is the Volgenau Chair for Engineering Excellence Professor at the UCLA Computer Science Department (and a former department chair), with joint appointment from the Electrical and Computer Engineering Department. He is the director of Center for Domain-Specific Computing (CDSC) and the director of VLSI Architecture, Synthesis, and Technology (VAST) Laboratory. Dr. Cong’s research interests include novel architectures and compilation for customizable computing, synthesis of VLSI circuits and systems, and quantum computing. He has over 600 publications in these areas, including 20 best paper awards, and 6 papers in the FPGA and Reconfigurable Computing Hall of Fame. He and his former students co-founded AutoESL, which developed the most widely used high-level synthesis tool for FPGAs (renamed to Vivado HLS and Vitis HLS after Xilinx’s acquisition). He is member of the National Academy of Engineering, the American Academy of Arts and Sciences, and a Fellow of ACM, IEEE, and the National Academy of Inventors. He is recipient of the IEEE Robert N. Noyce Medal “for fundamental contributions to electronic design automation and FPGA design methods” in 2022, the Phil Kaufman Award, the highest recognition in EDA, in 2024, and the ACM Chuck Thacker Breakthrough Award in 2025 “for fundamental contributions to the design and automation of field-programmable systems and customizable computing.”</p>
       </section>
   </template>
   <template id="details-meng-li">
@@ -315,6 +323,6 @@
       </section>
   </template>
 
-  <script src="js/main.js?v=20261030a"></script>
+  <script src="js/main.js?v=20261102a"></script>
 </body>
 </html>
